@@ -32,15 +32,16 @@ urlpatterns = [
     # Accounts (login, logout, register)
     path('accounts/', include('accounts.urls')),
 
-    # Other apps (if they have urls.py; comment out if causing errors)
-    path('appointments/', include('appointments.urls')),
-    path('billing/', include('billing.urls')),
-    path('patients/', include('patients.urls')),
-    path('staff/', include('staff.urls')),
-    path('pharmacy/', include('pharmacy.urls')),
-    path('medical-records/', include('medical_records.urls')),
-    path('dashboard/', include('dashboard.urls')),
-    path('reports/', include('reports.urls')),
+    # Other apps – COMMENTED OUT because their urls.py files are missing
+    # Uncomment only after you create the corresponding app/urls.py
+    # path('appointments/', include('appointments.urls')),
+    # path('billing/', include('billing.urls')),
+    # path('patients/', include('patients.urls')),
+    # path('staff/', include('staff.urls')),
+    # path('pharmacy/', include('pharmacy.urls')),
+    # path('medical-records/', include('medical_records.urls')),
+    # path('dashboard/', include('dashboard.urls')),
+    # path('reports/', include('reports.urls')),
 
     # Public landing page
     path('', TemplateView.as_view(template_name='landing.html'), name='landing'),
