@@ -1,11 +1,5 @@
-"""
-WSGI config for knh_hms project.
-"""
-
 import os
-
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'knh_hms.settings')
-
 application = get_wsgi_application()

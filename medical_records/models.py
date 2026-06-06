@@ -1,22 +1,14 @@
 ﻿from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class Prescription(models.Model):
-    patient = models.ForeignKey('patients.Patient', on_delete=models.CASCADE, null=True)
-    doctor = models.ForeignKey('accounts.User', on_delete=models.CASCADE, null=True)
-    date = models.DateTimeField(auto_now_add=True)
+class User(AbstractUser):
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    role = models.CharField(max_length=20, choices=[
+        ('patient', 'Patient'),
+        ('doctor', 'Doctor'),
+        ('nurse', 'Nurse'),
+        ('admin', 'Admin'),
+    ], blank=True, null=True)
 
-    class Meta:
-        app_label = 'medical_records'
-
-class MedicalRecord(models.Model):
-    patient = models.ForeignKey('patients.Patient', on_delete=models.CASCADE)
-    record_date = models.DateTimeField(auto_now_add=True)
-    diagnosis = models.TextField(blank=True)
-
-    class Meta:
-        app_label = 'medical_records'
-
-
-# Placeholders for admin imports
-admin_model = []
-admin_models = []
+    def __str__(self):
+        return self.username
