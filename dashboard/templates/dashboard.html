@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block title %}Dashboard - KNH
+{% extends "base.html" %} {% load static %} {% block title %}Dashboard - Dr. Horton Dental Clinic
 HMS{% endblock %} {% block page_title %} {% if user.role == 'patient' %}
 Welcome, {{ user.get_full_name|default:user.email }} 
 {% elif user.role ==  'doctor' %} Doctor Dashboard {% elif user.role == 'pharmacist' %} Pharmacy

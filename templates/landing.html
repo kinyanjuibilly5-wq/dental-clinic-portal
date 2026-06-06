@@ -1,0 +1,144 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Horton Dental Clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero { background: #f8f9fa; padding: 80px 0; text-align: center; }
+        .service-card { text-align: center; padding: 30px; margin-bottom: 30px; border-radius: 10px; transition: 0.3s; background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 3rem; margin-bottom: 15px; }
+        footer { background: #343a40; color: white; padding: 30px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/">🦷 Dr. Horton Dental Clinic</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="btn btn-outline-light ms-2" href="/accounts/login/">Login</a></li>
+                <li class="nav-item"><a class="btn btn-light ms-2" href="/accounts/register/">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>🦷 Welcome to Dr. Horton Dental Clinic</h1>
+        <p class="lead">Your smile is our priority – quality dental care with a gentle touch.</p>
+        <a href="/accounts/register/" class="btn btn-primary btn-lg">Book an Appointment</a>
+    </div>
+</section>
+
+<!-- Services Section with Emojis -->
+<section id="services" class="container my-5">
+    <h2 class="text-center mb-5">✨ Our Dental Services</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h4>General Dentistry</h4>
+                <p>Checkups, cleanings, fillings & preventive care.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">😁✨</div>
+                <h4>Cosmetic Dentistry</h4>
+                <p>Teeth whitening, veneers & smile makeovers.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">🦷📐</div>
+                <h4>Orthodontics</h4>
+                <p>Braces & Invisalign for straight teeth.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">🔪🦷</div>
+                <h4>Oral Surgery</h4>
+                <p>Extractions, implants & wisdom teeth removal.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">🧒🦷</div>
+                <h4>Pediatric Dentistry</h4>
+                <p>Gentle dental care for children.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <div class="service-icon">🚨⚡</div>
+                <h4>Emergency Care</h4>
+                <p>Same‑day appointments for dental emergencies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>About Dr. Horton Dental Clinic</h2>
+                <p>We are a modern dental clinic dedicated to providing high‑quality, affordable dental care. Our experienced team uses the latest technology to ensure your comfort and safety.</p>
+                <p>📍 Located in Nairobi, we serve families and individuals with a wide range of dental services.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="service-icon">🦷✨</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">📞 Contact Us</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="service-icon">📞</div>
+            <h5>Call</h5>
+            <p>+254 712 345 678</p>
+        </div>
+        <div class="col-md-4">
+            <div class="service-icon">💬</div>
+            <h5>WhatsApp</h5>
+            <p><a href="https://wa.me/254712345678">Chat with us</a></p>
+        </div>
+        <div class="col-md-4">
+            <div class="service-icon">📍</div>
+            <h5>Visit</h5>
+            <p>123 Dental Avenue, Nairobi</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2025 Dr. Horton Dental Clinic. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

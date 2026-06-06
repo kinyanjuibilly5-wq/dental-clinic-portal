@@ -1,20 +1,15 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from django.views.generic import TemplateView   # <-- add this
+
+# Custom admin branding
+admin.site.site_header = "Dr. Horton Dental Clinic Administration"
+admin.site.site_title = "Dr. Horton Dental Clinic Portal"
+admin.site.index_title = "Welcome to Dr. Horton Dental Clinic"
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='landing.html'), name='landing'),  # <-- changed
     path('admin/', admin.site.urls),
-    path('', include('dashboard.urls')),
-    path('dashboard/', include('dashboard.urls')),  # Add explicit dashboard path
     path('accounts/', include('accounts.urls')),
-    path('patients/', include('patients.urls')),
-    path('appointments/', include('appointments.urls')),
-    path('medical-records/', include('medical_records.urls')),
-    path('pharmacy/', include('pharmacy.urls')),
-    path('billing/', include('billing.urls')),
-    path('notifications/', include('notifications.urls')),
+    # ... other paths (appointments, billing, etc.)
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

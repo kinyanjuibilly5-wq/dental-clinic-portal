@@ -1,3 +1,12 @@
-from django.db import models
+﻿from django.db import models
 
-# Create your models here.
+class Placeholder(models.Model):
+    name = models.CharField(max_length=100, blank=True)
+
+    class Meta:
+        app_label = 'dashboard'
+
+
+# Placeholders for admin imports
+admin_model = []
+admin_models = []
