@@ -13,7 +13,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-this-in-production')
 DEBUG = False
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dental-clinic-portal.onrender.com', '.onrender.com']
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -21,22 +20,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Custom apps
-    'accounts',
-    'appointments',
-    'billing',
-    'patients',
-    'staff',
-    # 'pharmacy',          # COMMENTED OUT – causing migration errors
-    'medical_records',
-    'laboratory',
-    'radiology',
-    'nursing',
-    'inventory',
-    'hr',
-    'finance',
-    'dashboard',
-    'reports',
+    'accounts',    # keep only this custom app
+    # 'appointments',
+    # 'billing',
+    # 'patients',
+    # 'staff',
+    # 'pharmacy',
+    # 'medical_records',
+    # 'laboratory',
+    # 'radiology',
+    # 'nursing',
+    # 'inventory',
+    # 'hr',
+    # 'finance',
+    # 'dashboard',
+    # 'reports',
 ]
 
 MIDDLEWARE = [
