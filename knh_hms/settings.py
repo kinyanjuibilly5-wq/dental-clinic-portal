@@ -17,10 +17,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-this-in-production')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', '0') == '1'
+DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,.onrender.com').split(',')
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dental-clinic-portal.onrender.com', '.onrender.com']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
