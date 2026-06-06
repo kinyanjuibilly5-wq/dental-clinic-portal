@@ -1,0 +1,1 @@
+web: gunicorn knh_hms.wsgi:application
