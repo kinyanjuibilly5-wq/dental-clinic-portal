@@ -1,1 +1,1 @@
-web: gunicorn knh_hms.wsgi:application
+web: gunicorn knh_hms.wsgi:application --bind 0.0.0.0:$PORT
